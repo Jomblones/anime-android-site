@@ -1,0 +1,231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+	font-family: 'Poppins', sans-serif;
+}
+
+div.App {
+	min-height: 100vh;
+	width: 100vw;
+	background-color: #4a4a4a;
+	height: 100%;
+}
+
+header {
+	h1.welcome {
+		text-align: center;
+	}
+	padding-top: 50px;	
+	padding-bottom: 25px;
+	
+	h1 {
+		color: #ebebeb;
+		font-size: 36px;
+		font-weight: 550;
+		text-align: center;
+
+		strong {
+			font-weight: 550;
+			background: linear-gradient(to right,#b289e1, #9ebbe6);
+  			-webkit-background-clip: text;
+  			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+footer {
+	position: fixed;
+	background-color: rgb(195, 195, 195);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 8px;
+	text-align: center;
+  }
+
+.content-wrap {
+	margin: 12px 12px 12px 12px ;	
+
+	 div.sidebar {
+
+		// flex: 1 1 250px;
+		// max-width: 225px;
+		// padding-right: 10px;
+		// background-color: lightblue;
+		// border: 1px solid black;
+		// height: 100px;
+		// width: 500px;
+		// overflow-x: scroll;
+
+		nav {
+
+			h1 {
+				color: #fafafa;
+			}
+			// display: grid;
+			// grid-auto-columns: 100%;
+			// justify-content: center;
+			// align-items: center;
+			
+			padding-left: 16px;
+			padding-right: 16px;
+
+			h3 {
+				margin-top: 50px;
+				color: #dfdfdf;
+				font-size: 24px;
+				margin-bottom: 16px;
+				margin-left: 20px;
+			}
+		.media-scroller {
+			margin-top:20px;
+			display: flex;
+			align-items: right;
+			align-self: right;
+			justify-content: left;
+			height: 90px;
+			
+			grid-auto-flow: column;
+			grid-auto-columns: 30%;
+			overflow-x: auto;
+			align-items: center;
+			
+
+		}
+		.element {
+			margin-left: 0px;
+			margin-top: 10px;
+
+		}
+
+			a {
+				align-items: left;
+				white-space:nowrap;
+				overflow: visible;
+				// min-width: 100vw;
+				margin:0px 10px 0px 10px;
+				padding: 8px 14px;
+				text-align: center;
+				text-overflow:ellipsis;
+
+				color: #333333;
+				font-size: 14px;
+				margin-bottom: 12px;
+
+				background-color: #EEE;
+				border-radius: 90px;
+				text-decoration: none;
+
+				transition: 0.4s;
+
+				&:hover {
+					background-color: #313131;
+					color: #AAA;
+				}
+			}
+		}
+	}
+
+	main {
+		flex: 1 1 0%;
+		padding: 0px 16px;
+		margin-bottom: 30px;
+
+		.main-head {
+			display: flex;
+			justify-content: flex-end;
+
+			.search-box {
+				margin-top: 20px;
+				display: flex;
+				justify-content: center;
+				align-self: center;
+				// padding-right: 20vw;
+				width: 10vw;
+				flex: 1 1 100%;
+				
+				input {
+
+					align-self: center;
+					justify-self: center;
+					justify-content: center;
+					appearance: none;
+					background: none;
+					outline: none;
+					border: none;
+
+					display: block;
+					width: 100%;
+					max-width: 400px;
+					padding: 16px;
+					border-radius: 999px;
+					background-color: #ffffff;
+
+					transition: 0.2s;
+
+					::placeholder  {
+						color: #888;
+					}
+
+					&:focus, &:valid {
+						background-color: #d5d5d5;
+						color: #000000;
+					}
+				}
+			}
+		}
+
+		.anime-list {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 32px;
+			margin-bottom: 32px;
+			margin: 32px -8px 0px;
+
+
+			.anime-card {
+				flex: 1 1 50%;
+				max-width: 50%;
+				padding: 16px 8px;
+
+				a {
+					text-decoration: none;
+				}
+
+				figure {
+					display: block;
+					margin-bottom: 16px;
+
+					img {
+						display: block;
+						width: 100%;
+						height: 250px;
+						object-fit: cover;
+						border-radius: 16px;
+						box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+
+						transition: 0.4s;
+					}
+				}
+
+				h3 {
+					font-size: 17px;
+					color: #dfdfdf;
+				}
+
+				&:hover {
+					figure {
+						img {
+							box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+							transform: scale(1.05);
+						}
+					}
+				}
+			}
+		}
+	}
+}
