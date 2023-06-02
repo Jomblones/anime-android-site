@@ -1,10 +1,10 @@
 import React from 'react'
 
-function AnimeCard({anime}) {
+function EpisodeCard({anime}) {
 	return (
 		<article className="anime-card">
 			<a 
-				href={anime.url}
+				href={anime.url} 
 				target="_blank" 
 				rel="noreferrer">
 				<figure>
@@ -18,4 +18,4 @@ function AnimeCard({anime}) {
 	)
 }
 
-export default AnimeCard
+export default EpisodeCard

@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 
+
 function App() {
 	const [animeList, SetAnimeList] = useState([]);
 	const [topAnime, SetTopAnime] = useState([]);
+	const [episodes, SetEpisodes] = useState([]);
 	const [search, SetSearch] = useState("");
 
 	const GetTopAnime = async () => {
@@ -31,6 +34,14 @@ function App() {
 
 		SetAnimeList(temp.results);
 		// console.log(temp)
+	}
+
+	const FetchEpisode = async (anime_id) => {
+		const temp = await fetch(`https://api.consumet.org/anime/gogoanime/info/${anime_id}`)
+			.then(res => res.json());
+		
+		// SetEpisodes(temp.results);
+		
 	}
 
 	useEffect(() => {

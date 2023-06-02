@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimeCard from './AnimeCard';
+import EpisodeCard from './EpisodeCard';
 
 function MainContent(props) {
 	return (
